@@ -208,27 +208,27 @@
                     var toolbar = document.createElement('div');
                     toolbar.className = 'embed-toolbar';
 
-                    var openTabBtn = document.createElement('button');
-                    openTabBtn.type = 'button';
-                    openTabBtn.textContent = '새 탭에서 열기';
-                    openTabBtn.title = '새 탭에서 열기';
-                    openTabBtn.addEventListener('click', function (e) {
-                        window.open(url, '_blank');
-                    });
-                    toolbar.appendChild(openTabBtn);
-                    var localAutoFS = !!autoFullscreen;
-                    var fsInfoBtn = null;
-                    if (allowFullscreen) {
-                        fsInfoBtn = document.createElement('button');
-                        fsInfoBtn.type = 'button';
-                        fsInfoBtn.textContent = localAutoFS ? '자동전체화면: 켬' : '자동전체화면: 끔';
-                        fsInfoBtn.title = '자동 전체화면 토글';
-                        fsInfoBtn.addEventListener('click', function () {
-                            localAutoFS = !localAutoFS;
-                            fsInfoBtn.textContent = localAutoFS ? '자동전체화면: 켬' : '자동전체화면: 끔';
-                        });
-                        toolbar.appendChild(fsInfoBtn);
-                    }
+                    // var openTabBtn = document.createElement('button');
+                    // openTabBtn.type = 'button';
+                    // openTabBtn.textContent = '새 탭에서 열기';
+                    // openTabBtn.title = '새 탭에서 열기';
+                    // openTabBtn.addEventListener('click', function (e) {
+                    //     window.open(url, '_blank');
+                    // });
+                    // toolbar.appendChild(openTabBtn);
+                    // var localAutoFS = !!autoFullscreen;
+                    // var fsInfoBtn = null;
+                    // if (allowFullscreen) {
+                    //     fsInfoBtn = document.createElement('button');
+                    //     fsInfoBtn.type = 'button';
+                    //     fsInfoBtn.textContent = localAutoFS ? '자동전체화면: 켬' : '자동전체화면: 끔';
+                    //     fsInfoBtn.title = '자동 전체화면 토글';
+                    //     fsInfoBtn.addEventListener('click', function () {
+                    //         localAutoFS = !localAutoFS;
+                    //         fsInfoBtn.textContent = localAutoFS ? '자동전체화면: 켬' : '자동전체화면: 끔';
+                    //     });
+                    //     toolbar.appendChild(fsInfoBtn);
+                    // }
 
                     var closeBtn = document.createElement('button');
                     closeBtn.id = 'fullEmbedClose';
@@ -342,4 +342,5 @@
         })();
     </script>
 </body>
+
 </html>
