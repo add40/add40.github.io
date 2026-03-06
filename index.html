@@ -297,12 +297,12 @@
             if (f2) f2.addEventListener('click', openFullEmbedFor('https://calendar.naver.com/', false));
             if (f3) f3.addEventListener('click', function () {
                 var targetUrl = 'https://calendar.naver.com/';
-                // 열린 창 참조를 보존해서 닫기 시도
+                // 열린 창 참조를 보존해서 30초 후에 닫기 시도
                 var w = window.open(targetUrl, '_blank');
                 if (w) {
                     setTimeout(function () {
                         try { if (!w.closed) w.close(); } catch (e) { }
-                    }, 10000);
+                    }, 30000);
                 } else {
                     // 팝업 차단: 안내 표시 및 같은 탭에서 열기 옵션 제공
                     var notice = document.getElementById('popupNotice');
@@ -330,13 +330,13 @@
                 }
             });
 
-            // 페이지가 열리면 f1 자동 실행, f3는 1분마다 자동 실행
+            // 페이지가 열리면 f1 자동 실행, f3는 10분마다 자동 실행
             window.addEventListener('load', function () {
                 try { if (f1) f1.click(); } catch (e) { }
                 if (f3) {
-                    // 즉시 실행 후 60초 간격
+                    // 즉시 실행 후 600초 간격
                     try { f3.click(); } catch (e) { }
-                    setInterval(function () { try { f3.click(); } catch (e) { } }, 60000);
+                    setInterval(function () { try { f3.click(); } catch (e) { } }, 600000);
                 }
             });
         })();
@@ -344,3 +344,4 @@
 </body>
 
 </html>
+
